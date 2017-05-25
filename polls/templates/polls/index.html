@@ -1,10 +1,10 @@
 {% if latest_question_list %}
 <h3>Here is the list of all Questions:</h3>
-    <ul>
+    <ol type="1">
     {% for question in latest_question_list %}
         <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
     {% endfor %}
-    </ul>
+    </ol>
 {% else %}
-    <p>No polls are available.</p>
+    <p>Sorry! No polls are available.</p>
 {% endif %}
